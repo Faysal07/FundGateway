@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #4caf50;
+  --secondary: #ffc107;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.active {
+  text-decoration: none;
+  position: relative;
+}
+.inactive {
+  text-decoration: none;
+  position: relative;
+}
+
+.inactive:after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 0%;
+  background: var(--primary);
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.active:after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  bottom: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 70%;
+  background: var(--primary);
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.active:hover:after {
+  width: 100%;
+  background: var(--secondary);
+}
+.inactive:hover:after {
+  width: 100%;
+  background: var(--secondary);
+}
+
+.hero {
+  padding: 0px !important;
+  margin: 0px !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
